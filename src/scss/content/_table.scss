@@ -1,0 +1,20 @@
+table {
+    color: var(--textParagraph);
+}
+
+table p {
+    margin-bottom: 0;
+}
+
+table, th, td {
+    border: {
+        width: 3px;
+        style: solid;
+        color: var(--textSubheader);
+        collapse: collapse;
+    }
+}
+
+th, td {
+    padding: 15px;
+}

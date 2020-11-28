@@ -1,0 +1,305 @@
+/*!
+ *  PoffertjesUI 0.1.0
+ *  By Netail
+ */
+html {
+  --background: hsl(0, 0%, 100%);
+  --backgroundAccent: hsl(0, 0%, 97%);
+  --backgroundInvert: hsl(0, 0%, 22%);
+  --textAccent: hsl(0, 0%, 10%);
+  --textTitle: hsl(0, 0%, 10%);
+  --textHeader: hsl(0, 0%, 21%);
+  --textSubheader: hsl(0, 0%, 29%);
+  --textParagraph: hsl(0, 0%, 29%);
+  --textInvert: hsl(0, 0%, 100%);
+  --textLink: rgb(50, 115, 220);
+  --textMark: rgb(247, 247, 89);
+  --colorPrimary: rgb(255, 97, 97);
+  background-color: var(--background);
+}
+
+html[theme=dark] {
+  --background: hsl(0, 0%, 22%);
+  --backgroundAccent: hsl(0, 0%, 25%);
+  --backgroundInvert: hsl(0, 0%, 97%);
+  --textAccent: hsl(0, 0%, 100%);
+  --textTitle: hsl(0, 0%, 100%);
+  --textHeader: hsl(0, 0%, 100%);
+  --textSubheader: hsl(0, 0%, 95%);
+  --textParagraph: hsl(0, 0%, 95%);
+  --textInvert: hsl(0, 0%, 22%);
+  --textLink: rgb(52, 114, 212);
+  --textMark: rgb(247, 247, 89);
+  --colorPrimary: rgb(255, 97, 97);
+  background-color: var(--background);
+}
+
+.title-1 {
+  color: var(--textTitle);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 5rem;
+}
+.title-2 {
+  color: var(--textTitle);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 4.25rem;
+}
+.title-3 {
+  color: var(--textTitle);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 3.5rem;
+}
+
+h1 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 3rem;
+}
+h2 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 2.5rem;
+}
+h3 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 2rem;
+}
+h4 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+h5 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 1.25rem;
+}
+h6 {
+  color: var(--textHeader);
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  font-size: 1rem;
+}
+
+.sub {
+  color: var(--textSubheader);
+  font-weight: 600;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.accent {
+  color: var(--textAccent);
+}
+
+p {
+  color: var(--textParagraph);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+}
+
+a {
+  color: var(--textParagraph);
+  text-decoration: none;
+}
+a:link {
+  color: var(--textLink);
+}
+a:visited {
+  color: var(--textLink);
+}
+a:active {
+  color: var(--textParagraph);
+}
+a:hover {
+  color: var(--textParagraph);
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+kbd {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: var(--backgroundInvert);
+  border-radius: 15px;
+  color: var(--textInvert);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+code,
+samp {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+var {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+strong {
+  color: var(--textAccent);
+  font-weight: 800;
+}
+
+del,
+s {
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--colorPrimary);
+}
+
+ins,
+u {
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: var(--colorPrimary);
+}
+
+b {
+  font-weight: 800;
+}
+
+i {
+  font-style: italic;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
+}
+
+dfn {
+  font-style: italic;
+}
+
+q {
+  font-style: italic;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+}
+
+mark {
+  background-color: var(--textMark);
+}
+
+pre {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--textParagraph);
+  font-style: italic;
+  white-space: pre;
+}
+
+address {
+  color: var(--textParagraph);
+  font-weight: 700;
+  font-style: italic;
+}
+
+blockquote {
+  color: var(--textParagraph);
+  font-weight: 700;
+  font-style: italic;
+}
+
+summary::-webkit-details-marker {
+  color: var(--textSubheader);
+}
+
+summary {
+  color: var(--textHeader);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+fieldset {
+  color: var(--backgroundInvert);
+}
+
+legend {
+  color: var(--textHeader);
+  font-weight: 800;
+}
+
+table {
+  color: var(--textParagraph);
+}
+
+table p {
+  margin-bottom: 0;
+}
+
+table, th, td {
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--textSubheader);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+/*# sourceMappingURL=index.css.map */

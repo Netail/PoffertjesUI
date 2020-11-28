@@ -1,0 +1,13 @@
+# IDE
+.DS_Store/
+.idea/
+.vscode/
+
+# File types
+*.err
+*.log
+*.zip
+
+# NPM
+node_modules/
+package-lock.json

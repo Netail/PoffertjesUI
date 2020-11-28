@@ -1,0 +1,74 @@
+@mixin title {
+    color: var(--textTitle);
+    font-weight: 700;
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0.5rem;
+        left: 0;
+    }
+}
+
+@mixin header {
+    color: var(--textHeader);
+    font-weight: 700;
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0.5rem;
+        left: 0;
+    }
+}
+
+.title {
+    &-1 {
+        @include title;
+        font-size: 5rem;
+    }
+    &-2 {
+        @include title;
+        font-size: 4.25rem;
+    }
+    &-3 {
+        @include title;
+        font-size: 3.5rem;
+    }
+}
+
+h {
+    &1 {
+        @include header;
+        font-size: 3rem;
+    }
+    &2 {
+        @include header;
+        font-size: 2.5rem;
+    }
+    &3 {
+        @include header;
+        font-size: 2rem;
+    }
+    &4 {
+        @include header;
+        font-size: 1.5rem;
+    }
+    &5 {
+        @include header;
+        font-size: 1.25rem;
+    }
+    &6 {
+        @include header;
+        font-size: 1rem;
+    }
+}
+
+.sub {
+    color: var(--textSubheader);
+    font-weight: 600;
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 0.5rem;
+        left: 0;
+    }
+}

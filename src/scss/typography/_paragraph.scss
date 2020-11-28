@@ -1,0 +1,145 @@
+@mixin monospace {
+    font-family: monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.accent {
+    color: var(--textAccent);
+}
+
+p {
+    color: var(--textParagraph);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: {
+        top: 0;
+        right: 0;
+        bottom: 1rem;
+        left: 0;
+    }
+}
+
+a {
+    color: var(--textParagraph);
+    text-decoration: none;
+
+    &:link {
+        color: var(--textLink);
+    }
+    &:visited {
+        color: var(--textLink);
+    }
+    &:active {
+        color: var(--textParagraph);
+    }
+    &:hover {
+        color: var(--textParagraph);
+    }
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+kbd {
+    @include monospace;
+    background-color: var(--backgroundInvert);
+    border-radius: 15px;
+    color: var(--textInvert);
+    padding: {
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+    text-transform: uppercase;
+}
+
+code,
+samp {
+    @include monospace;
+}
+
+var {
+    @include monospace;
+    font-style: italic;
+}
+
+strong {
+    color: var(--textAccent);
+    font-weight: 800;
+}
+
+del,
+s {
+    text-decoration: {
+        line: line-through;
+        style: solid;
+        thickness: 3px;
+        color: var(--colorPrimary);
+    }
+}
+
+ins,
+u {
+    // text-decoration: {
+    //     line: underline;
+    //     style: solid;
+    //     thickness: 3px;
+    // }
+    text-decoration: none;
+    border-bottom: {
+        style: solid;
+        width: 3px;
+        color: var(--colorPrimary);
+    }
+}
+
+b {
+    font-weight: 800;
+}
+
+i {
+    font-style: italic;
+}
+
+em {
+    font-style: italic;
+}
+
+cite {
+    font-style: italic;
+}
+
+dfn {
+    font-style: italic;
+}
+
+q {
+    font-style: italic;
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: {
+        line: underline;
+        style: dotted;
+        thickness: 1px;
+    }
+}
+
+mark {
+    background-color: var(--textMark);
+}
+
+pre {
+    @include monospace;
+    color: var(--textParagraph);
+    font-style: italic;
+    white-space: pre;
+}
+
+address {
+    color: var(--textParagraph);
+    font-weight: 700;
+    font-style: italic;
+}

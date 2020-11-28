@@ -1,0 +1,9 @@
+summary::-webkit-details-marker {
+    color: var(--textSubheader);
+}
+
+summary {
+    color: var(--textHeader);
+    font-weight: 800;
+    cursor: pointer;
+}

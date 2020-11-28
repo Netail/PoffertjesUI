@@ -1,0 +1,21 @@
+html {
+    // Background
+    --background: hsl(0, 0%, 100%);
+    --backgroundAccent: hsl(0, 0%, 97%);
+    --backgroundInvert: hsl(0, 0%, 22%);
+
+    // Typography
+    --textAccent: hsl(0, 0%, 10%);
+    --textTitle: hsl(0, 0%, 10%);
+    --textHeader: hsl(0, 0%, 21%);
+    --textSubheader: hsl(0, 0%, 29%);
+    --textParagraph: hsl(0, 0%, 29%);
+    --textInvert: hsl(0, 0%, 100%);
+
+    --textLink: rgb(50, 115, 220);
+    --textMark: rgb(247, 247, 89);
+
+    --colorPrimary: rgb(255, 97, 97);
+
+    background-color: var(--background);
+}
