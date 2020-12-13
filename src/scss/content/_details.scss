@@ -1,8 +1,8 @@
-summary::-webkit-details-marker {
+details summary::-webkit-details-marker {
     color: var(--textSubheader);
 }
 
-summary {
+details summary {
     color: var(--textHeader);
     font-weight: 800;
     cursor: pointer;

@@ -1,0 +1,12 @@
+@mixin monospace {
+    font-family: monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+pre {
+    @include monospace;
+    color: var(--textParagraph);
+    font-style: italic;
+    white-space: pre;
+}

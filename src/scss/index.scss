@@ -4,15 +4,18 @@
  */
 
 // Default themes
-@import './variables/lightmode';
-@import './variables/darkmode';
+@import './themes/light';
+@import './themes/dark';
 
 // Typography
-@import './typography/headers';
-@import './typography/paragraph';
+@import './content/typography/headers';
+@import './content/typography/paragraph';
+@import './content/typography/address';
+@import './content/typography/pre';
+@import './content/typography/blockquote';
 
 // Content
-@import './content/blockquote';
 @import './content/details';
 @import './content/fieldset';
 @import './content/table';
+@import './components/card';

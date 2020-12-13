@@ -8,6 +8,10 @@
     color: var(--textAccent);
 }
 
+.muted {
+    color: var(--textMuted);
+}
+
 p {
     color: var(--textParagraph);
     font-weight: 700;
@@ -81,11 +85,6 @@ s {
 
 ins,
 u {
-    // text-decoration: {
-    //     line: underline;
-    //     style: solid;
-    //     thickness: 3px;
-    // }
     text-decoration: none;
     border-bottom: {
         style: solid;
@@ -129,17 +128,4 @@ abbr[title] {
 
 mark {
     background-color: var(--textMark);
-}
-
-pre {
-    @include monospace;
-    color: var(--textParagraph);
-    font-style: italic;
-    white-space: pre;
-}
-
-address {
-    color: var(--textParagraph);
-    font-weight: 700;
-    font-style: italic;
 }
