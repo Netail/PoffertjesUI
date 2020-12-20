@@ -1,8 +1,8 @@
 .card {
-    padding: 50px;
+    padding: var(--cardPadding);
     border: {
         style: none;
-        radius: var(--borderRadius);
+        radius: var(--cardPadding);
     }
-    background-color: var(--card);
+    background-color: var(--cardBackground);
 }

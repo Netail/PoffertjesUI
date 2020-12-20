@@ -1,6 +1,6 @@
 {
   "name": "poffertjesui",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Open Source CSS Framework by Netail",
   "scripts": {
     "compile": "sass --style expanded --no-error-css --stop-on-error src/scss:dist/css",

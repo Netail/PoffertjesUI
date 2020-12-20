@@ -1,0 +1,16 @@
+button {
+    padding: {
+        top: 13px;
+        right: 40px;
+        bottom: 13px;
+        left: 40px;
+    }
+    background-color: var(--colorPrimary);
+    border: {
+        style: none;
+        radius: 2em;
+    }
+    color: var(--textButton);
+    font-weight: 700;
+    font-size: 0.9rem;
+}

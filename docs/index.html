@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <style>
         * {font-family: 'Open Sans', sans-serif;}
+        body {margin: 0}
     </style>
     <script>
         var darkMode = false;
@@ -36,8 +37,17 @@
     </div>
 
     <div class="card" style="margin-top: 100px;">
+        <h1>Introduction</h1>
+        <p>PoffertjesUI is a CSS framework inspired by Samsung's OneUI, Spotify and iOS.</p>
+    </div>
+
+    <div class="card" style="margin-top: 100px;">
         <h1>Theming</h1>
-        <p>PoffertjesUI support themes which can be used by adding <code>theme="dark"</code> into the <code>&lt;html&gt;</code> tag, which results in: <code>&lt;html theme="dark"&gt;</code></p>
+        <p>
+            PoffertjesUI support themes, which are used by adding a theme attribute into the html tag <code>&lt;html theme="dark"&gt;</code>.
+            <br>
+            Themes override the default "Light theme" CSS variables, which can be found <a href="https://github.com/Netail/poffertjes-ui/blob/main/src/scss/themes/_light.scss" target="_blank">here</a>.
+        </p>
         <button onclick="switchTheme()" id="themeSwitcher">Darkmode</button>
     </div>
 

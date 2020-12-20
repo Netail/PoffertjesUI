@@ -3,7 +3,8 @@
  *  By Netail
  */
 html {
-  --background: hsl(0, 0%, 97%);
+  --background: hsl(0, 0%, 100%);
+  --backgroundAccent: hsl(0, 0%, 98%);
   --backgroundInvert: hsl(0, 0%, 9%);
   --textAccent: hsl(0, 0%, 10%);
   --textTitle: hsl(0, 0%, 10%);
@@ -15,14 +16,16 @@ html {
   --textLink: rgb(50, 115, 220);
   --textMark: rgb(247, 247, 89);
   --border: hsl(0, 0%, 22%);
-  --borderRadius: 1rem;
-  --card: hsl(0, 0%, 100%);
+  --textButton: hsl(0, 0%, 100%);
+  --cardBackground: hsl(0, 0%, 97%);
+  --cardPadding: 50px;
   --colorPrimary: rgb(255, 97, 97);
   background-color: var(--background);
 }
 
 html[theme=dark] {
   --background: hsl(0, 0%, 9%);
+  --backgroundAccent: hsl(0, 0%, 11%);
   --backgroundInvert: hsl(0, 0%, 97%);
   --textAccent: hsl(0, 0%, 100%);
   --textTitle: hsl(0, 0%, 100%);
@@ -31,11 +34,12 @@ html[theme=dark] {
   --textParagraph: hsl(0, 0%, 92%);
   --textMuted: hsl(0, 0%, 70%);
   --textInvert: hsl(0, 0%, 22%);
-  --textLink: rgb(52, 114, 212);
+  --textLink: rgb(59, 124, 230);
   --textMark: rgb(247, 247, 89);
   --border: hsl(0, 0%, 97%);
-  --borderRadius: 1rem;
-  --card: hsl(0, 0%, 15%);
+  --textButton: hsl(0, 0%, 100%);
+  --cardBackground: hsl(0, 0%, 13%);
+  --cardPadding: 50px;
   --colorPrimary: rgb(255, 97, 97);
   background-color: var(--background);
 }
@@ -274,6 +278,19 @@ blockquote {
   font-style: italic;
 }
 
+button {
+  padding-top: 13px;
+  padding-right: 40px;
+  padding-bottom: 13px;
+  padding-left: 40px;
+  background-color: var(--colorPrimary);
+  border-style: none;
+  border-radius: 2em;
+  color: var(--textButton);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 details summary::-webkit-details-marker {
   color: var(--textSubheader);
 }
@@ -313,10 +330,10 @@ th, td {
 }
 
 .card {
-  padding: 50px;
+  padding: var(--cardPadding);
   border-style: none;
-  border-radius: var(--borderRadius);
-  background-color: var(--card);
+  border-radius: var(--cardPadding);
+  background-color: var(--cardBackground);
 }
 
 /*# sourceMappingURL=index.css.map */

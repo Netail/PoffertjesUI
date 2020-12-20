@@ -1,6 +1,7 @@
 html {
     // Background
-    --background: hsl(0, 0%, 97%);
+    --background: hsl(0, 0%, 100%);
+    --backgroundAccent: hsl(0, 0%, 98%);
     --backgroundInvert: hsl(0, 0%, 9%);
 
     // Typography
@@ -16,8 +17,13 @@ html {
 
     // Elements and Tables
     --border: hsl(0, 0%, 22%);
-    --borderRadius: 1rem;
-    --card: hsl(0, 0%, 100%);
+
+    // Forms
+    --textButton: hsl(0, 0%, 100%);
+
+    // Card
+    --cardBackground: hsl(0, 0%, 97%);
+    --cardPadding: 50px;
 
     --colorPrimary: rgb(255, 97, 97);
 
