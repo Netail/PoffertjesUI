@@ -1,0 +1,38 @@
+.row {
+    padding: 0;
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+    .row {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .row {
+        padding: 0 2rem;
+    }
+}
+
+.col {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.col-50 {
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+}
+
+.col-33 {
+    -ms-flex: 1 1 33%;
+    flex: 1 1 33%;
+}
+
+.col-25 {
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+}

@@ -8,323 +8,409 @@
     <title>PoffertjesUI</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap">
-    <style>
-        * {font-family: 'Open Sans', sans-serif;}
-        body {margin: 0}
-    </style>
     <script>
-        var darkMode = false;
+        var selectedTheme = localStorage.getItem("theme");
+        if (selectedTheme != null) document.getElementsByTagName("html")[0].setAttribute("theme", selectedTheme);
 
         function switchTheme() {
-            const themeSwitcher = document.getElementById("themeSwitcher");
-            if (darkMode) {
+            if (selectedTheme != null) {
+                selectedTheme = null;
+                localStorage.removeItem("theme", selectedTheme);
+
                 document.getElementsByTagName("html")[0].removeAttribute("theme");
-                themeSwitcher.innerHTML = "Darkmode";
-                darkMode = false;
             } else {
-                document.getElementsByTagName("html")[0].setAttribute("theme", "dark");
-                themeSwitcher.innerHTML = "Lightmode";
-                darkMode = true;
+                selectedTheme = "dark";
+                localStorage.setItem("theme", selectedTheme);
+
+                document.getElementsByTagName("html")[0].setAttribute("theme", selectedTheme);
             }
         }
     </script>
 </head>
 <body>
-    <div class="card" style="text-align: center;">
-        <h1 class="title-1">PoffertjesUI</h1>
-        <h3 class="sub"><u>Open Source</u> CSS Framework by Netail</h3>
+    <div class="sitenotice">
+        <p>Currently in alpha phase! (Responsive Status: ❌)</p>
     </div>
 
-    <div class="card" style="margin-top: 100px;">
-        <h1>Introduction</h1>
-        <p>PoffertjesUI is a CSS framework inspired by Samsung's OneUI, Spotify and iOS.</p>
-    </div>
-
-    <div class="card" style="margin-top: 100px;">
-        <h1>Theming</h1>
-        <p>
-            PoffertjesUI support themes, which are used by adding a theme attribute into the html tag <code>&lt;html theme="dark"&gt;</code>.
-            <br>
-            Themes override the default "Light theme" CSS variables, which can be found <a href="https://github.com/Netail/poffertjes-ui/blob/main/src/scss/themes/_light.scss" target="_blank">here</a>.
-        </p>
-        <button onclick="switchTheme()" id="themeSwitcher">Darkmode</button>
-    </div>
-
-    <div class="card" style="margin-top: 100px;">
-        <h1>Typography</h1>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Titles</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;h1 class="title-1"&gt;</code></td>
-                    <td><h1 class="title-1">Title 1</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h1 class="title-2"&gt;</code></td>
-                    <td><h1 class="title-2">Title 2</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h1 class="title-3"&gt;</code></td>
-                    <td><h1 class="title-3">Title 3</h1></td>
-                </tr>
-            </table>
+    <div class="row">
+        <div class="col-50 my-auto" style="text-align: center;">
+            <h1 class="title-1">PoffertjesUI</h1>
+            <h3 class="subheader"><u>Open Source</u> CSS Framework by Netail</h3>
+            <div class="my-1">
+                <a href="https://raw.githack.com/Netail/PoffertjesUI/main/dist/css/index.css" target="_blank"><button class="btn-primary">Download</button></a>
+                <a href="https://github.com/Netail/PoffertjesUI" target="_blank"><button>Source Code</button></a>
+            </div>
         </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Headers</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;h1&gt;</code></td>
-                    <td><h1>Header 1</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h2&gt;</code></td>
-                    <td><h2>Header 2</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h3&gt;</code></td>
-                    <td><h3>Header 3</h3></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h4&gt;</code></td>
-                    <td><h4>Header 4</h4></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h5&gt;</code></td>
-                    <td><h5>Header 5</h5></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h6&gt;</code></td>
-                    <td><h6>Header 6</h6></td>
-                </tr>
-            </table>
+        <div class="col-50 my-auto" style="text-align: center;">
+            <img width="75%" src="assets/img/web-developer.svg">
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <div class="card">
+                <h1>Introduction</h1>
+                <p>PoffertjesUI is a CSS framework inspired by Samsung's OneUI, Spotify and iOS.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <h1>Theming</h1>
+                <p>
+                    PoffertjesUI support themes, which are used by adding a theme attribute into the html tag. For example: <code>&lt;html theme="dark"&gt;</code>.
+                    <br>
+                    Themes override the default "Light theme" CSS variables, which can be found <a href="https://github.com/Netail/PoffertjesUI/blob/main/src/scss/themes/_light.scss" target="_blank">here</a>. (Keep in mind that the theming files can change as this CSS framework is still in development)
+                    <br>
+                    The default font for this CSS framework is "Open Sans", which has to be imported yourself using <a href="https://fonts.google.com/specimen/Open+Sans?query=open+sans#standard-styles" target="_blank">this</a> link.
+                </p>
+                <button class="btn-primary" id="themeSwitcher" onclick="switchTheme()">Switch theme</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <h1>Typography</h1>
         
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Subheaders</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;h1 class="sub"&gt;</code></td>
-                    <td><h1 class="sub">Subheader 1</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h2 class="sub"&gt;</code></td>
-                    <td><h2 class="sub">Subheader 2</h1></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h3 class="sub"&gt;</code></td>
-                    <td><h3 class="sub">Subheader 3</h3></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h4 class="sub"&gt;</code></td>
-                    <td><h4 class="sub">Subheader 4</h4></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h5 class="sub"&gt;</code></td>
-                    <td><h5 class="sub">Subheader 5</h5></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;h6 class="sub"&gt;</code></td>
-                    <td><h6 class="sub">Subheader 6</h6></td>
-                </tr>
-            </table>
-        </div>
+                <div class="my-2">
+                    <h3 class="subheader">Titles</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1 class="title-1"&gt;</code></td>
+                                <td><h1 class="title-1">Title 1</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1 class="title-2"&gt;</code></td>
+                                <td><h1 class="title-2">Title 2</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1 class="title-3"&gt;</code></td>
+                                <td><h1 class="title-3">Title 3</h1></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Headers</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1&gt;</code></td>
+                                <td><h1>Header 1</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h2&gt;</code></td>
+                                <td><h2>Header 2</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h3&gt;</code></td>
+                                <td><h3>Header 3</h3></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h4&gt;</code></td>
+                                <td><h4>Header 4</h4></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h5&gt;</code></td>
+                                <td><h5>Header 5</h5></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h6&gt;</code></td>
+                                <td><h6>Header 6</h6></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
 
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Inline text tags</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;p&gt;</code></td>
-                    <td><p>This is a paragraph</p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;b&gt;</code></td>
-                    <td><p>This is a paragraph with <b>bold</b></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;span class"accent"&gt;</code></td>
-                    <td><p>This is a paragraph with <span class="accent">accent</span></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;strong&gt;</code></td>
-                    <td><p>This is a paragraph with <strong>strong</strong></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;span class"muted"&gt;</code></td>
-                    <td><p>This is a paragraph with <span class="muted">muted</span></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;i&gt;</code></td>
-                    <td><p>This is a paragraph with <i>italic</i></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;a&gt;</code></td>
-                    <td><p>This is a paragraph with <a href="https://github.com/Netail" target="_blank">link</a></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;s&gt;</code></td>
-                    <td><p>This is a paragraph with <s>strikethrough</s></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;del&gt;</code></td>
-                    <td><p>This is a paragraph with <del>delete</del></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;u&gt;</code></td>
-                    <td><p>This is a paragraph with <u>underline</u></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;ins&gt;</code></td>
-                    <td><p>This is a paragraph with <ins>insert</ins></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;small&gt;</code></td>
-                    <td><p>This is a paragraph with <small>small</small></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;mark&gt;</code></td>
-                    <td><p>This is a paragraph with <mark>mark</mark></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;abbr title="abbreviation"&gt;</code></td>
-                    <td><p>This is a paragraph with <abbr title="abbreviation">abbr</abbr></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;q&gt;</code></td>
-                    <td><p>This is a paragraph with <q>quote</q></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;kbd&gt;</code></td>
-                    <td><p>This is a paragraph with <kbd>keyboard</kbd> + <kbd>keys</kbd></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;code&gt;</code></td>
-                    <td><p>This is a paragraph with <code>code</code></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;samp&gt;</code></td>
-                    <td><p>This is a paragraph with <samp>system output</samp></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;var&gt;</code></td>
-                    <td><p>This is a paragraph with <var>variable</var></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;em&gt;</code></td>
-                    <td><p>This is a paragraph with <em>emphasis</em></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;cite&gt;</code></td>
-                    <td><p>This is a paragraph with <cite>title of work</cite></p></td>
-                </tr>
-                <tr>
-                    <td><code>&lt;dfn&gt;</code></td>
-                    <td><p>This is a paragraph with <dfn>definition</dfn></p></td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Address</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;address&gt;</code></td>
-                    <td>
-                        <address>
-                            This is an address<br>
-                            Box 564, Disneyland<br>
-                            USA
-                        </address>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Blockquote</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;blockquote&gt;</code></td>
-                    <td><blockquote>This is a blockquote</blockquote></td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Details</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;details&gt;&lt;summary&gt;</code></td>
-                    <td>
-                        <details>
-                            <summary>This is a summary</summary>
-                            <p>These are details</p>
-                        </details>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Fieldset</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;fieldset&gt;&lt;legend&gt;</code></td>
-                    <td>
-                        <fieldset>
-                            <legend>Legend</legend>
-                            <p>This is a fieldset</p>
-                        </fieldset>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3 class="sub">Preformatted text</h3>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Example</th>
-                </tr>
-                <tr>
-                    <td><code>&lt;pre&gt;</code></td>
-                    <td><pre>This is preformatted text</pre></td>
-                </tr>
-            </table>
+                <div class="my-2">
+                    <h3 class="subheader">Subheaders</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1 class="subheader"&gt;</code></td>
+                                <td><h1 class="subheader">Subheader 1</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h2 class="subheader"&gt;</code></td>
+                                <td><h2 class="subheader">Subheader 2</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h3 class="subheader"&gt;</code></td>
+                                <td><h3 class="subheader">Subheader 3</h3></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h4 class="subheader"&gt;</code></td>
+                                <td><h4 class="subheader">Subheader 4</h4></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h5 class="subheader"&gt;</code></td>
+                                <td><h5 class="subheader">Subheader 5</h5></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h6 class="subheader"&gt;</code></td>
+                                <td><h6 class="subheader">Subheader 6</h6></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Inline text tags</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;p&gt;</code></td>
+                                <td><p>This is a paragraph</p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;b&gt;</code></td>
+                                <td><p>This is a paragraph with <b>bold</b></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;span class"accent"&gt;</code></td>
+                                <td><p>This is a paragraph with <span class="accent">accent</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;strong&gt;</code></td>
+                                <td><p>This is a paragraph with <strong>strong</strong></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;span class"muted"&gt;</code></td>
+                                <td><p>This is a paragraph with <span class="muted">muted</span></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;i&gt;</code></td>
+                                <td><p>This is a paragraph with <i>italic</i></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;a&gt;</code></td>
+                                <td><p>This is a paragraph with <a href="https://github.com/Netail" target="_blank">link</a></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;s&gt;</code></td>
+                                <td><p>This is a paragraph with <s>strikethrough</s></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;del&gt;</code></td>
+                                <td><p>This is a paragraph with <del>delete</del></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;u&gt;</code></td>
+                                <td><p>This is a paragraph with <u>underline</u></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;ins&gt;</code></td>
+                                <td><p>This is a paragraph with <ins>insert</ins></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;small&gt;</code></td>
+                                <td><p>This is a paragraph with <small>small</small></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;mark&gt;</code></td>
+                                <td><p>This is a paragraph with <mark>mark</mark></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;abbr title="abbreviation"&gt;</code></td>
+                                <td><p>This is a paragraph with <abbr title="abbreviation">abbr</abbr></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;q&gt;</code></td>
+                                <td><p>This is a paragraph with <q>quote</q></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;kbd&gt;</code></td>
+                                <td><p>This is a paragraph with <kbd>keyboard</kbd> + <kbd>keys</kbd></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;code&gt;</code></td>
+                                <td><p>This is a paragraph with <code>code</code></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;samp&gt;</code></td>
+                                <td><p>This is a paragraph with <samp>system output</samp></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;var&gt;</code></td>
+                                <td><p>This is a paragraph with <var>variable</var></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;em&gt;</code></td>
+                                <td><p>This is a paragraph with <em>emphasis</em></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;cite&gt;</code></td>
+                                <td><p>This is a paragraph with <cite>title of work</cite></p></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;dfn&gt;</code></td>
+                                <td><p>This is a paragraph with <dfn>definition</dfn></p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Address</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;address&gt;</code></td>
+                                <td>
+                                    <address>
+                                        This is an address<br>
+                                        Box 564, Disneyland<br>
+                                        USA
+                                    </address>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Blockquote</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;blockquote&gt;</code></td>
+                                <td><blockquote>This is a blockquote</blockquote></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Details</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;details&gt;&lt;summary&gt;</code></td>
+                                <td>
+                                    <details>
+                                        <summary>This is a summary</summary>
+                                        <p>These are details</p>
+                                    </details>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Fieldset</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;fieldset&gt;&lt;legend&gt;</code></td>
+                                <td>
+                                    <fieldset>
+                                        <legend>Legend</legend>
+                                        <p>This is a fieldset</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Preformatted text</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;pre&gt;</code></td>
+                                <td><pre>This is preformatted text</pre></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        
+                <div class="my-2">
+                    <h3 class="subheader">Lists</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th>Code</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;ul&gt;&lt;li&gt;</code></td>
+                                <td>
+                                    <ul>
+                                        <li>List item</li>
+                                        <li>List item</li>
+                                        <li>List item</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;ol&gt;&lt;li&gt;</code></td>
+                                <td>
+                                    <ol>
+                                        <li>List item</li>
+                                        <li>List item</li>
+                                        <li>List item</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code></td>
+                                <td>
+                                    <dl>
+                                        <dt>List title</dt>
+                                        <dd>List description</dd>
+                                        <dt>List title</dt>
+                                        <dd>List description</dd>
+                                    </dl>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

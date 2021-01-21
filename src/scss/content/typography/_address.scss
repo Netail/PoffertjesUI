@@ -1,5 +1,8 @@
 address {
-    color: var(--textParagraph);
-    font-weight: 700;
-    font-style: italic;
+    color: inherit;
+    font: {
+        size: inherit;
+        style: italic;
+        weight: inherit;
+    }
 }

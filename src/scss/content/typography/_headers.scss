@@ -1,74 +1,104 @@
-@mixin title {
-    color: var(--textTitle);
-    font-weight: 700;
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0.5rem;
-        left: 0;
-    }
-}
-
-@mixin header {
-    color: var(--textHeader);
-    font-weight: 700;
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0.5rem;
-        left: 0;
-    }
+.subheader {
+    color: var(--text);
 }
 
 .title {
-    &-1 {
-        @include title;
-        font-size: 5rem;
-    }
-    &-2 {
-        @include title;
-        font-size: 4.25rem;
-    }
+    &-1,
+    &-2,
     &-3 {
-        @include title;
-        font-size: 3.5rem;
+        color: var(--textAccent);
+        font: {
+            size: 3rem;
+            weight: 700;
+        }
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .title {
+        &-1 {
+            font-size: 5rem;
+        }
+        &-2 {
+            font-size: 4.25rem;
+        }
+        &-3 {
+            font-size: 3.5rem;
+        }
     }
 }
 
 h {
     &1 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 3rem;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
     &2 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 2.5rem;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
     &3 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 2rem;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
     &4 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 1.5rem;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
     &5 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 1.25rem;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
     &6 {
-        @include header;
+        color: var(--textAccent);
+        font-weight: 700;
         font-size: 1rem;
-    }
-}
-
-.sub {
-    color: var(--textSubheader);
-    font-weight: 600;
-    margin: {
-        top: 0;
-        right: 0;
-        bottom: 0.5rem;
-        left: 0;
+        margin: {
+            top: 0;
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+        }
     }
 }

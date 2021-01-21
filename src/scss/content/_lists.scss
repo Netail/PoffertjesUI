@@ -1,8 +1,10 @@
-fieldset {
-    border-color: var(--border);
+ul,
+ol,
+dl {
+    margin: 0.5rem 0;
 }
 
-legend {
+dt {
     color: var(--textAccent);
     font: {
         size: 1.25rem;

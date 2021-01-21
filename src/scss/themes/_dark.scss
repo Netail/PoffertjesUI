@@ -1,15 +1,11 @@
 html[theme='dark'] {
     // Background
     --background: hsl(0, 0%, 9%);
-    --backgroundAccent: hsl(0, 0%, 11%);
     --backgroundInvert: hsl(0, 0%, 97%);
 
     // Typography
     --textAccent: hsl(0, 0%, 100%);
-    --textTitle: hsl(0, 0%, 100%);
-    --textHeader: hsl(0, 0%, 98%);
-    --textSubheader: hsl(0, 0%, 92%);
-    --textParagraph: hsl(0, 0%, 92%);
+    --text: hsl(0, 0%, 92%);
     --textMuted: hsl(0, 0%, 70%);
     --textInvert: hsl(0, 0%, 22%);
     --textLink: rgb(59, 124, 230);
@@ -17,15 +13,21 @@ html[theme='dark'] {
 
     // Elements and Tables
     --border: hsl(0, 0%, 97%);
+    --borderSub: hsla(0, 0%, 97%, 0.5);
 
     // Forms
-    --textButton: hsl(0, 0%, 100%);
+    --formText: hsl(0, 0%, 90%);
+    --formBackground: hsl(0, 0%, 13%);
+    --formBackgroundAccent: hsl(0, 0%, 14%);
+
+    --formPrimaryText: hsl(0, 0%, 100%);
+    --formPrimaryBackground:rgb(255, 97, 97);
+    --formPrimaryBackgroundAccent:  rgb(255, 90, 90);
 
     // Card
-    --cardBackground: hsl(0, 0%, 13%);
+    --cardBackground: hsl(0, 0%, 11%);
     --cardPadding: 50px;
 
+    // Colors
     --colorPrimary: rgb(255, 97, 97);
-
-    background-color: var(--background);
 }

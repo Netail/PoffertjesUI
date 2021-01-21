@@ -1,139 +1,144 @@
 /*!
- *  PoffertjesUI 0.1.6
+ *  PoffertjesUI v0.1.7
+ *  https://github.com/Netail/PoffertjesUI
  *  By Netail
  */
 html {
   --background: hsl(0, 0%, 100%);
-  --backgroundAccent: hsl(0, 0%, 98%);
   --backgroundInvert: hsl(0, 0%, 9%);
-  --textAccent: hsl(0, 0%, 10%);
-  --textTitle: hsl(0, 0%, 10%);
-  --textHeader: hsl(0, 0%, 21%);
-  --textSubheader: hsl(0, 0%, 29%);
-  --textParagraph: hsl(0, 0%, 29%);
+  --textAccent: hsl(0, 0%, 0%);
+  --text: hsl(0, 0%, 25%);
   --textMuted: hsl(0, 0%, 50%);
   --textInvert: hsl(0, 0%, 100%);
   --textLink: rgb(50, 115, 220);
   --textMark: rgb(247, 247, 89);
   --border: hsl(0, 0%, 22%);
-  --textButton: hsl(0, 0%, 100%);
+  --borderSub: hsl(0, 0%, 22%, 0.5);
+  --formText: hsl(0, 0%, 42%);
+  --formBackground: hsl(0, 0%, 94%);
+  --formBackgroundAccent: hsl(0, 0%, 93%);
+  --formPrimaryText: hsl(0, 0%, 100%);
+  --formPrimaryBackground: rgb(255, 97, 97);
+  --formPrimaryBackgroundAccent: rgb(255, 90, 90);
   --cardBackground: hsl(0, 0%, 97%);
   --cardPadding: 50px;
   --colorPrimary: rgb(255, 97, 97);
-  background-color: var(--background);
 }
 
 html[theme=dark] {
   --background: hsl(0, 0%, 9%);
-  --backgroundAccent: hsl(0, 0%, 11%);
   --backgroundInvert: hsl(0, 0%, 97%);
   --textAccent: hsl(0, 0%, 100%);
-  --textTitle: hsl(0, 0%, 100%);
-  --textHeader: hsl(0, 0%, 98%);
-  --textSubheader: hsl(0, 0%, 92%);
-  --textParagraph: hsl(0, 0%, 92%);
+  --text: hsl(0, 0%, 92%);
   --textMuted: hsl(0, 0%, 70%);
   --textInvert: hsl(0, 0%, 22%);
   --textLink: rgb(59, 124, 230);
   --textMark: rgb(247, 247, 89);
   --border: hsl(0, 0%, 97%);
-  --textButton: hsl(0, 0%, 100%);
-  --cardBackground: hsl(0, 0%, 13%);
+  --borderSub: hsla(0, 0%, 97%, 0.5);
+  --formText: hsl(0, 0%, 90%);
+  --formBackground: hsl(0, 0%, 13%);
+  --formBackgroundAccent: hsl(0, 0%, 14%);
+  --formPrimaryText: hsl(0, 0%, 100%);
+  --formPrimaryBackground:rgb(255, 97, 97);
+  --formPrimaryBackgroundAccent: rgb(255, 90, 90);
+  --cardBackground: hsl(0, 0%, 11%);
   --cardPadding: 50px;
   --colorPrimary: rgb(255, 97, 97);
-  background-color: var(--background);
 }
 
-.title-1 {
-  color: var(--textTitle);
-  font-weight: 700;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  font-size: 5rem;
-}
-.title-2 {
-  color: var(--textTitle);
-  font-weight: 700;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  font-size: 4.25rem;
-}
-.title-3 {
-  color: var(--textTitle);
-  font-weight: 700;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  font-size: 3.5rem;
+address {
+  color: inherit;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: inherit;
 }
 
-h1 {
-  color: var(--textHeader);
-  font-weight: 700;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
+.subheader {
+  color: var(--text);
+}
+
+.title-1, .title-2, .title-3 {
+  color: var(--textAccent);
   font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .title-1 {
+    font-size: 5rem;
+  }
+  .title-2 {
+    font-size: 4.25rem;
+  }
+  .title-3 {
+    font-size: 3.5rem;
+  }
+}
+h1 {
+  color: var(--textAccent);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
 }
 h2 {
-  color: var(--textHeader);
+  color: var(--textAccent);
   font-weight: 700;
+  font-size: 2.5rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
-  font-size: 2.5rem;
 }
 h3 {
-  color: var(--textHeader);
+  color: var(--textAccent);
   font-weight: 700;
+  font-size: 2rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
-  font-size: 2rem;
 }
 h4 {
-  color: var(--textHeader);
+  color: var(--textAccent);
   font-weight: 700;
+  font-size: 1.5rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
-  font-size: 1.5rem;
 }
 h5 {
-  color: var(--textHeader);
+  color: var(--textAccent);
   font-weight: 700;
+  font-size: 1.25rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
-  font-size: 1.25rem;
 }
 h6 {
-  color: var(--textHeader);
+  color: var(--textAccent);
   font-weight: 700;
+  font-size: 1rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
-  font-size: 1rem;
 }
 
-.sub {
-  color: var(--textSubheader);
-  font-weight: 600;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
+blockquote {
+  color: inherit;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: inherit;
 }
 
 .accent {
@@ -145,9 +150,6 @@ h6 {
 }
 
 p {
-  color: var(--textParagraph);
-  font-weight: 700;
-  font-size: 1rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 1rem;
@@ -155,7 +157,10 @@ p {
 }
 
 a {
-  color: var(--textParagraph);
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 a:link {
@@ -165,19 +170,22 @@ a:visited {
   color: var(--textLink);
 }
 a:active {
-  color: var(--textParagraph);
+  color: inherit;
 }
 a:hover {
-  color: var(--textParagraph);
+  color: inherit;
 }
 
 small {
+  color: inherit;
   font-size: 0.75rem;
+  font-style: inherit;
+  font-weight: inherit;
 }
 
 kbd {
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 700;
   background-color: var(--backgroundInvert);
   border-radius: 15px;
@@ -190,24 +198,31 @@ kbd {
 code,
 samp {
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 700;
 }
 
 var {
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 700;
   font-style: italic;
 }
 
+b,
 strong {
   color: var(--textAccent);
+  font-size: inherit;
+  font-style: inherit;
   font-weight: 800;
 }
 
 del,
 s {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
   text-decoration-line: line-through;
   text-decoration-style: solid;
   text-decoration-thickness: 3px;
@@ -216,37 +231,30 @@ s {
 
 ins,
 u {
-  text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: var(--colorPrimary);
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
 }
 
-b {
-  font-weight: 800;
-}
-
-i {
-  font-style: italic;
-}
-
-em {
-  font-style: italic;
-}
-
-cite {
-  font-style: italic;
-}
-
+i,
+q,
+em,
+cite,
 dfn {
+  color: inherit;
+  font-size: inherit;
   font-style: italic;
-}
-
-q {
-  font-style: italic;
+  font-weight: inherit;
 }
 
 abbr[title] {
+  font-size: inherit;
+  color: inherit;
   cursor: help;
   text-decoration-line: underline;
   text-decoration-style: dotted;
@@ -255,50 +263,73 @@ abbr[title] {
 
 mark {
   background-color: var(--textMark);
-}
-
-address {
-  color: var(--textParagraph);
-  font-weight: 700;
-  font-style: italic;
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 }
 
 pre {
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--textParagraph);
   font-style: italic;
   white-space: pre;
 }
 
-blockquote {
-  color: var(--textParagraph);
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background-color: var(--formBackground);
+  border-radius: 2em;
+  border-style: none;
+  color: var(--formText);
+  font-size: 1rem;
   font-weight: 700;
-  font-style: italic;
+  padding: 0.5em 3em;
+  user-select: none;
+}
+button:not(:disabled):hover,
+input[type=button]:not(:disabled):hover,
+input[type=reset]:not(:disabled):hover,
+input[type=submit]:not(:disabled):hover {
+  background-color: var(--formBackgroundAccent);
+  cursor: pointer;
+}
+button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active {
+  background-color: var(--formBackgroundAccent);
+}
+button:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus {
+  outline: none;
 }
 
-button {
-  padding-top: 13px;
-  padding-right: 40px;
-  padding-bottom: 13px;
-  padding-left: 40px;
-  background-color: var(--colorPrimary);
-  border-style: none;
-  border-radius: 2em;
-  color: var(--textButton);
-  font-weight: 700;
-  font-size: 0.9rem;
+.btn-primary {
+  background-color: var(--formPrimaryBackground);
+  color: var(--formPrimaryText);
+}
+.btn-primary:not(:disabled):hover {
+  background-color: var(--formPrimaryBackgroundAccent);
+}
+.btn-primary:active {
+  background-color: var(--formPrimaryBackgroundAccent);
 }
 
 details summary::-webkit-details-marker {
-  color: var(--textSubheader);
+  color: var(--text);
 }
 
 details summary {
-  color: var(--textHeader);
-  font-weight: 800;
+  color: var(--textAccent);
   cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 fieldset {
@@ -306,27 +337,75 @@ fieldset {
 }
 
 legend {
-  color: var(--textHeader);
-  font-weight: 800;
+  color: var(--textAccent);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+ul,
+ol,
+dl {
+  margin: 0.5rem 0;
+}
+
+dt {
+  color: var(--textAccent);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 table {
-  color: var(--textParagraph);
-}
-
-table p {
-  margin-bottom: 0;
-}
-
-table, th, td {
-  border-width: 3px;
-  border-style: solid;
-  border-color: var(--border);
   border-collapse: collapse;
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
 }
-
-th, td {
-  padding: 15px;
+table th {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border);
+  color: var(--textSubheader);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+table th * {
+  margin: 0;
+}
+table td {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--borderSub);
+  padding: 0.75rem;
+}
+table td * {
+  margin: 0;
 }
 
 .card {
@@ -334,6 +413,82 @@ th, td {
   border-style: none;
   border-radius: var(--cardPadding);
   background-color: var(--cardBackground);
+  word-wrap: break-word;
+  max-width: 100vw;
+}
+
+.sitenotice {
+  background-color: var(--backgroundInvert);
+  color: var(--textInvert);
+  padding: 0.5em 0;
+  text-align: center;
+  width: 100%;
+}
+.sitenotice p {
+  color: var(--textInvert);
+  margin: 0;
+}
+
+.row {
+  padding: 0;
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .row {
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .row {
+    padding: 0 2rem;
+  }
+}
+.col {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.col-50 {
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+}
+
+.col-33 {
+  -ms-flex: 1 1 33%;
+  flex: 1 1 33%;
+}
+
+.col-25 {
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+}
+
+.my-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.my-2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.my-3 {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.my-4 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.my-5 {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

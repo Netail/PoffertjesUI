@@ -1,0 +1,12 @@
+.sitenotice {
+    background-color: var(--backgroundInvert);
+    color: var(--textInvert);
+    padding: 0.5em 0;
+    text-align: center;
+    width: 100%;
+
+    p {
+        color: var(--textInvert);
+        margin: 0;
+    }
+}

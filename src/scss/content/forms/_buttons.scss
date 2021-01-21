@@ -1,16 +1,40 @@
-button {
-    padding: {
-        top: 13px;
-        right: 40px;
-        bottom: 13px;
-        left: 40px;
-    }
-    background-color: var(--colorPrimary);
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: var(--formBackground);
     border: {
-        style: none;
         radius: 2em;
+        style: none;
     }
-    color: var(--textButton);
-    font-weight: 700;
-    font-size: 0.9rem;
+    color: var(--formText);
+    font: {
+        size: 1rem;
+        weight: 700;
+    }
+    padding: 0.5em 3em;
+    user-select: none;
+
+    &:not(:disabled):hover {
+        background-color: var(--formBackgroundAccent);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: var(--formBackgroundAccent);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-primary {
+    background-color: var(--formPrimaryBackground);
+    color: var(--formPrimaryText);
+
+    &:not(:disabled):hover {
+        background-color: var(--formPrimaryBackgroundAccent);
+    }
+    &:active {
+        background-color: var(--formPrimaryBackgroundAccent);
+    }
 }
